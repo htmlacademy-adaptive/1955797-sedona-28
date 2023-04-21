@@ -13,24 +13,20 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__container">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Фото и видео</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list action-list">
-            <li class="action-list__item">
-              <a class="site-list__link" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="action-list__item">
-              <a class="site-list__link" href="https://htmlacademy.ru">Html Academy</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--active" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru">Html Academy</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="main-container">
@@ -40,84 +36,84 @@
         <h2 class="intro__title">Оставьте свой отзыв</h2>
         <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
-      <section class="user-form">
+      <section class="review">
         <h2 class="visually-hidden">Форма отзыва</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="user-form__group form-group">
-            <legend class="form-group__caption">Представьтесь:</legend>
-            <ul class="form-group__list">
-              <li class="form-group__item">
+        <form class="review__form form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__group">
+            <legend class="form__group-caption">Представьтесь:</legend>
+            <ul class="form__group-list">
+              <li class="form__group-item">
                 <label class="label" for="user-name">Имя*:</label>
                 <input class="input" type="text" name="user-name" id="user-name" value="Пётр">
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label" for="user-surname">Фамилия*:</label>
                 <input class="input" type="text" name="user-surname" id="user-surname" value="Пустота">
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label" for="user-patronymic">Отчество:</label>
                 <input class="input" type="text" name="user-patronymic" id="user-patronymic" value="Викторович">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="user-form__group form-group">
-            <legend class="form-group__caption">Контактная информация:</legend>
-            <ul class="form-group__list">
-              <li class="form-group__item">
+          <fieldset class="form__group">
+            <legend class="form__group-caption">Контактная информация:</legend>
+            <ul class="form__group-list">
+              <li class="form__group-item">
                 <label class="label" for="user-phone">Контактный телефон*:</label>
                 <input class="input input--phone" type="text" name="user-phone" id="user-phone" placeholder="Введите телефон"">
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label" for="user-email">Электронная почта*:</label>
                 <input class="input input--email" type="text" name="user-email" id="user-email" placeholder="Введите e-mail">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="user-form__group form-group">
-            <legend class="form-group__caption">Ваше общее впечатление:</legend>
-            <ul class="form-group__list">
-              <li class="form-group__item">
+          <fieldset class="form__group">
+            <legend class="form__group-caption">Ваше общее впечатление:</legend>
+            <ul class="form__group-list">
+              <li class="form__group-item">
                 <label class="label label--radio" for="positive-impression">Скорее положительное</label>
-                <input class="input input--radio" type="radio" name="impression" id="positive-impression" value="positive" checked>
+                <input class="radio" type="radio" name="impression" id="positive-impression" value="positive" checked>
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label label--radio" for="negative-impression">Скорее отрицательное</label>
-                <input class="input input--radio" type="radio" name="impression" id="negative-impression" value="negative">
+                <input class="radio" type="radio" name="impression" id="negative-impression" value="negative">
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label label--radio" for="uncertain-impression">Затрудняюсь ответить</label>
-                <input class="input input--radio" type="radio" name="impression" id="uncertain-impression" value="uncertain">
+                <input class="radio" type="radio" name="impression" id="uncertain-impression" value="uncertain">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="user-form__group form-group">
-            <legend class="form-group__caption">Посещенные достопримечательности:</legend>
-            <ul class="form-group__list">
-              <li class="form-group__item">
+          <fieldset class="form__group">
+            <legend class="form__group-caption">Посещенные достопримечательности:</legend>
+            <ul class="form__group-list">
+              <li class="form__group-item">
                 <label class="label label--checkbox" for="bridge">Мост Дьявола</label>
-                <input class="input input--checkbox" type="checkbox" name="bridge" id="bridge" checked>
+                <input class="checkbox" type="checkbox" name="bridge" id="bridge" checked>
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label label--checkbox" for="mountain">Гора-Колокол</label>
-                <input class="input input--checkbox" type="checkbox" name="mountain" id="mountain" checked>
+                <input class="checkbox" type="checkbox" name="mountain" id="mountain" checked>
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label label--checkbox" for="park">Слайд-парк</label>
-                <input class="input input--checkbox" type="checkbox" name="park" id="park" checked>
+                <input class="checkbox" type="checkbox" name="park" id="park" checked>
               </li>
-              <li class="form-group__item">
+              <li class="form__group-item">
                 <label class="label label--checkbox" for="rocks">Красные скалы</label>
-                <input class="input input--checkbox" type="checkbox" name="rocks" id="rocks">
+                <input class="checkbox" type="checkbox" name="rocks" id="rocks">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="user-form__group form-group">
-            <legend class="form-group__caption">Опишите свои эмоции:</legend>
+          <fieldset class="form__group">
+            <legend class="form__group-caption">Опишите свои эмоции:</legend>
             <textarea class="textarea" name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
-          <div class="user-form__button-wrapper">
-            <button class="user-form__button button" type="submit">Отправить отзыв</button>
-            <span class="user-form__note">* — обязательные поля</span>
+          <div class="form__button-wrapper">
+            <button class="form__button button" type="submit">Отправить отзыв</button>
+            <span class="form__note">* — обязательные поля</span>
           </div>
         </form>
       </section>
