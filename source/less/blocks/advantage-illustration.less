@@ -1,0 +1,26 @@
+.advantage-illustration {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+
+  &--reversed {
+    @media (min-width: @tablet-width) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.advantage-illustration__description {
+  @media (min-width: @tablet-width) {
+    flex: 1 1 0;
+  }
+}
+
+.advantage-illustration__image {
+  @media (min-width: @tablet-width) {
+    flex: 2 1 0;
+  }
+}

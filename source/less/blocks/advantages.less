@@ -4,4 +4,22 @@
 
 .advantages__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.advantages__item--illustrated {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.advantages__item-block {
+  display: flex;
+  flex-direction: column;
 }
