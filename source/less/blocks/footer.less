@@ -1,6 +1,17 @@
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 33px 60px;
   text-transform: uppercase;
   color: @color-heading-primary;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .footer__link {
@@ -12,4 +23,23 @@
 
 .footer__social-list {
   .list-reset();
+}
+
+.footer__social-item {
+  width: 48px;
+  height: 48px;
+  margin-right: 6px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copyright-text {
+  margin-right: 12px;
 }
