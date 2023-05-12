@@ -44,39 +44,41 @@
         <section class="review">
           <h2 class="visually-hidden">Форма отзыва</h2>
           <form class="review__form form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__group">
-              <legend class="form__group-caption">Представьтесь:</legend>
-              <ul class="form__group-list">
-                <li class="form__group-item">
-                  <label class="label" for="user-name">Имя*:</label>
-                  <input class="input" type="text" name="user-name" id="user-name" value="Пётр">
-                </li>
-                <li class="form__group-item">
-                  <label class="label" for="user-surname">Фамилия*:</label>
-                  <input class="input" type="text" name="user-surname" id="user-surname" value="Пустота">
-                </li>
-                <li class="form__group-item">
-                  <label class="label" for="user-patronymic">Отчество:</label>
-                  <input class="input" type="text" name="user-patronymic" id="user-patronymic" value="Викторович">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form__group">
-              <legend class="form__group-caption">Контактная информация:</legend>
-              <ul class="form__group-list">
-                <li class="form__group-item">
-                  <label class="label" for="user-phone">Контактный телефон*:</label>
-                  <input class="input input--phone" type="text" name="user-phone" id="user-phone" placeholder="Введите телефон"">
-                </li>
-                <li class="form__group-item">
-                  <label class="label" for="user-email">Электронная почта*:</label>
-                  <input class="input input--email" type="text" name="user-email" id="user-email" placeholder="Введите e-mail">
-                </li>
-              </ul>
-            </fieldset>
+            <div class="form__group-container">
+              <fieldset class="form__group">
+                <legend class="form__group-caption">Представьтесь:</legend>
+                <ul class="form__group-list">
+                  <li class="form__group-item">
+                    <label class="label" for="user-name">Имя*:</label>
+                    <input class="input" type="text" name="user-name" id="user-name" value="Пётр">
+                  </li>
+                  <li class="form__group-item">
+                    <label class="label" for="user-surname">Фамилия*:</label>
+                    <input class="input" type="text" name="user-surname" id="user-surname" value="Пустота">
+                  </li>
+                  <li class="form__group-item">
+                    <label class="label" for="user-patronymic">Отчество:</label>
+                    <input class="input" type="text" name="user-patronymic" id="user-patronymic" value="Викторович">
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="form__group">
+                <legend class="form__group-caption">Контактная информация:</legend>
+                <ul class="form__group-list">
+                  <li class="form__group-item">
+                    <label class="label" for="user-phone">Контактный телефон*:</label>
+                    <input class="input input--phone" type="text" name="user-phone" id="user-phone" placeholder="Введите телефон"">
+                  </li>
+                  <li class="form__group-item">
+                    <label class="label" for="user-email">Электронная почта*:</label>
+                    <input class="input input--email" type="text" name="user-email" id="user-email" placeholder="Введите e-mail">
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
             <fieldset class="form__group">
               <legend class="form__group-caption">Ваше общее впечатление:</legend>
-              <ul class="form__group-list">
+              <ul class="form__group-list form__group-list--impression">
                 <li class="form__group-item">
                   <label class="label label--radio" for="positive-impression">Скорее положительное</label>
                   <input class="radio" type="radio" name="impression" id="positive-impression" value="positive" checked>
@@ -93,7 +95,7 @@
             </fieldset>
             <fieldset class="form__group">
               <legend class="form__group-caption">Посещенные достопримечательности:</legend>
-              <ul class="form__group-list">
+              <ul class="form__group-list form__group-list--sights">
                 <li class="form__group-item">
                   <label class="label label--checkbox" for="bridge">Мост Дьявола</label>
                   <input class="checkbox" type="checkbox" name="bridge" id="bridge" checked>

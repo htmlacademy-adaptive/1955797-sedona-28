@@ -1,3 +1,13 @@
+.form__group-container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .form__group-caption {
   font-weight: 700;
   font-size: 18px;
@@ -8,4 +18,44 @@
 
 .form__group-list {
   .list-reset();
+
+  &--impression {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--sights {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.form__button-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
