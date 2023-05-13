@@ -40,11 +40,15 @@
     width: 20%;
     background-color: @color-background-primary;
   }
-}
 
-.main-nav__item:nth-child(n+3) {
-  @media (min-width: @tablet-width) {
-    order: 3;
+  &:nth-child(n+3) {
+    @media (min-width: @tablet-width) {
+      order: 3;
+    }
+  }
+
+  &:nth-child(6) {
+    margin-right: 20%;
   }
 }
 
