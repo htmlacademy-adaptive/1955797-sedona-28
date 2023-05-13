@@ -1,8 +1,30 @@
 .gallery {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .gallery__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery__item:first-child {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+  }
 }

@@ -1,5 +1,41 @@
 .main-header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 56px;
   font-weight: 700;
   text-transform: uppercase;
+  color: @color-heading-primary;
+}
+
+.main-header__logo-wrapper {
+  position: relative;
+  align-self: flex-start;
+  width: 20%;
+  padding-bottom: 56px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.main-header__logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 185px;
+  z-index: 1;
+}
+
+.main-header__logo img {
+  display: block;
+}
+
+.main-header__nav {
   color: @color-text-secondary;
+  background-color: @color-background-secondary;
 }

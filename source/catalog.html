@@ -2,113 +2,130 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo" href="index.html">
-        <img src="img/logo.svg" width="185" height="96" alt="Логотип: городок Седона.">
-      </a>
-      <nav class="main-header__nav main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
+    <div class="container">
+      <header class="main-header">
+        <div class="main-header__logo-wrapper">
+          <a class="main-header__logo" href="index.html">
+            <img src="img/logo.svg" width="185" height="96" alt="Логотип: городок Седона.">
+          </a>
+        </div>
+        <nav class="main-header__nav main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">Html Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main-container">
+        <h1 class="visually-hidden">Седона</h1>
+        <section class="intro">
+          <div class="intro__image-container">
+            <img src="img/sedona-title.svg" width="229" height="39" alt="Городок Седона.">
+          </div>
+          <h2 class="intro__title">Фото и видео</h2>
+          <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </section>
+        <section class="gallery">
+          <h2 class="visually-hidden">Галерея</h2>
+          <ul class="gallery__list">
+            <li class="gallery__item photo-block">
+              <div class="photo-block__image-container">
+                <img src="img/gallery/photo-1-mobile.jpg" width="280" height="280" alt="Неродные просторы">
+              </div>
+              <div class="photo-block__info">
+                <h3 class="photo-block__title">Неродные просторы</h3>
+                <span class="photo-block__author">Автор фото: Борис</span>
+              </div>
+              <span class="photo-block__likes">1350</span>
+            </li>
+            <li class="gallery__item photo-block">
+              <div class="photo-block__image-container">
+                <img src="img/gallery/photo-2-mobile.jpg" width="280" height="280" alt="Местная растительность">
+              </div>
+              <div class="photo-block__info">
+                <h3 class="photo-block__title">Местная растительность</h3>
+                <span class="photo-block__author">Автор фото: Сергей</span>
+              </div>
+              <span class="photo-block__likes">143</span>
+            </li>
+            <li class="gallery__item photo-block">
+              <div class="photo-block__image-container">
+                <img src="img/gallery/photo-3-mobile.jpg" width="280" height="280" alt="Дорога на север">
+              </div>
+              <div class="photo-block__info">
+                <h3 class="photo-block__title">Дорога на север</h3>
+                <span class="photo-block__author">Автор фото: Петр</span>
+              </div>
+              <span class="photo-block__likes">96</span>
+            </li>
+            <li class="gallery__item photo-block">
+              <div class="photo-block__image-container">
+                <img src="img/gallery/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола">
+              </div>
+              <div class="photo-block__info">
+                <h3 class="photo-block__title">Мост дьявола</h3>
+                <span class="photo-block__author">Автор фото: Антон</span>
+              </div>
+              <span class="photo-block__likes">254</span>
+            </li>
+          </ul>
+        </section>
+        <section class="video">
+          <h2 class="visually-hidden">Видеопрезентация</h2>
+          <p class="video__title">Все еще сомневаетесь?</p>
+          <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <div class="video__preview">
+            <img src="img/gallery/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация.">
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <a class="footer__link" href="#">#visitSedona</a>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--active" href="catalog.html">Фото и видео</a>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru">Html Academy</a>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <main class="main-container">
-      <h1 class="visually-hidden">Седона</h1>
-      <section class="intro">
-        <img class="intro__image" src="img/sedona-title.svg" width="229" height="39" alt="Городок Седона.">
-        <h2 class="intro__title">Фото и видео</h2>
-        <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-      </section>
-      <section class="gallery">
-        <h2 class="visually-hidden">Галерея</h2>
-        <ul class="gallery__list">
-          <li class="photo-block">
-            <img class="photo-block__image" src="img/gallery/photo-1-mobile.jpg" width="280" height="280" alt="Неродные просторы">
-            <div class="photo-block__info">
-              <h3 class="photo-block__title">Неродные просторы</h3>
-              <span class="photo-block__author">Автор фото: Борис</span>
-            </div>
-            <span class="photo-block__likes">1350</span>
-          </li>
-          <li class="photo-block">
-            <img class="photo-block__image" src="img/gallery/photo-2-mobile.jpg" width="280" height="280" alt="Местная растительность">
-            <div class="photo-block__info">
-              <h3 class="photo-block__title">Местная растительность</h3>
-              <span class="photo-block__author">Автор фото: Сергей</span>
-            </div>
-            <span class="photo-block__likes">143</span>
-          </li>
-          <li class="photo-block">
-            <img class="photo-block__image" src="img/gallery/photo-3-mobile.jpg" width="280" height="280" alt="Дорога на север">
-            <div class="photo-block__info">
-              <h3 class="photo-block__title">Дорога на север</h3>
-              <span class="photo-block__author">Автор фото: Петр</span>
-            </div>
-            <span class="photo-block__likes">96</span>
-          </li>
-          <li class="photo-block">
-            <img class="photo-block__image" src="img/gallery/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола">
-            <div class="photo-block__info">
-              <h3 class="photo-block__title">Мост дьявола</h3>
-              <span class="photo-block__author">Автор фото: Антон</span>
-            </div>
-            <span class="photo-block__likes">254</span>
-          </li>
-        </ul>
-      </section>
-      <section class="video">
-        <h2 class="visually-hidden">Видеопрезентация</h2>
-        <p class="video__title">Все еще сомневаетесь?</p>
-        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <img class="video__preview" src="img/gallery/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация.">
-      </section>
-    </main>
-    <footer class="footer">
-      <a class="footer__link" href="#">#visitSedona</a>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">ВКонтакте</span>
+        <div class="footer__copyright">
+          <span class="footer__copyright-text">Разработано</span>
+          <a class="footer__copyright-link" href="https://htmlacademy.ru">
+            <span class="visually-hidden">Html-Academy</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 60 60">
+              <path fill="#2e368f" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+            </svg>
           </a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Телеграм</span>
-          </a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Ютуб</span>
-          </a>
-        </li>
-      </ul>
-      <div class="footer__copyright">
-        <span class="footer__copyright-text">Разработано</span>
-        <a class="footer__copyright-link" href="https://htmlacademy.ru">
-          <span class="visually-hidden">Html-Academy</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 60 60">
-            <path fill="#2e368f" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
-          </svg>
-        </a>
-      </div>
-    </footer>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
