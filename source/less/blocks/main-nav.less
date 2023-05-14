@@ -7,9 +7,74 @@
   top: 0;
   right: 0;
   z-index: 3;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-color: @color-background-primary;
+  cursor: pointer;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 22px;
+    height: 4px;
+    background-color: @color-background-secondary;
+    box-shadow: 0 9px 0 0 @color-background-secondary, 0 18px 0 0 @color-background-secondary;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: fade(@color-background-secondary, 60%);
+    box-shadow: 0 9px 0 0 fade(@color-background-secondary, 60%), 0 18px 0 0 fade(@color-background-secondary, 60%);
+  }
+
+  &:active::before {
+    background-color: fade(@color-background-secondary, 30%);
+    box-shadow: 0 9px 0 0 fade(@color-background-secondary, 30%), 0 18px 0 0 fade(@color-background-secondary, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.main-nav--active .main-nav__toggle {
+  background-color: @color-background-secondary;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 17px;
+    width: 22px;
+    height: 4px;
+    background-color: @color-background-primary;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
+    background-color: fade(@color-background-primary, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@color-background-primary, 30%);
   }
 }
 
@@ -17,29 +82,30 @@
   .list-reset();
   display: none;
 
-  &--active {
-    @media (max-width: @mobile-width-only) {
-      position: absolute;
-      top: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 2;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     display: contents;
   }
 }
 
+.main-nav--nojs .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.main-nav--active .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
 .main-nav__item {
   background-color: @color-background-secondary;
-
-  @media (min-width: @tablet-width) {
-    width: 20%;
-    background-color: @color-background-primary;
-  }
 
   &:nth-child(n+3) {
     @media (min-width: @tablet-width) {
@@ -50,12 +116,74 @@
   &:nth-child(6) {
     margin-right: 20%;
   }
+
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:first-child {
+      border-top: transparent;
+    }
+
+    &:last-child {
+      border-bottom: transparent;
+    }
+
+    &:last-child::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: @color-background-primary;
+  }
 }
 
 .main-nav__link {
+  display: block;
+  padding: 20px;
+  padding-bottom: 14px;
   color: @color-text-secondary;
+  text-align: center;
+
+  &--active {
+    @media (min-width: @tablet-width) {
+      color: @color-heading-primary-current;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &:hover,
+    &:focus {
+      background-color: @color-background-secondary-hover;
+    }
+
+    &:active {
+      color: fade(@color-text-secondary, 30%);
+      background-color: @color-background-secondary-active;
+    }
+  }
 
   @media (min-width: @tablet-width) {
+    padding: 10px;
     color: @color-heading-primary;
+
+    &:hover,
+    &:focus {
+      color: @color-heading-primary-hover;
+    }
+
+    &:active {
+      color: fade(@color-heading-primary, 30%);
+    }
   }
 }
