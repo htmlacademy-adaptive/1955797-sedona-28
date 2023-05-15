@@ -41,6 +41,10 @@
   }
 }
 
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
 .main-nav--active .main-nav__toggle {
   background-color: @color-background-secondary;
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
@@ -155,12 +159,6 @@
   color: @color-text-secondary;
   text-align: center;
 
-  &--active {
-    @media (min-width: @tablet-width) {
-      color: @color-heading-primary-current;
-    }
-  }
-
   @media (max-width: @mobile-width-only) {
     &:hover,
     &:focus {
@@ -184,6 +182,12 @@
 
     &:active {
       color: fade(@color-heading-primary, 30%);
+    }
+  }
+
+  &--active {
+    @media (min-width: @tablet-width) {
+      color: @color-heading-primary-current;
     }
   }
 }
