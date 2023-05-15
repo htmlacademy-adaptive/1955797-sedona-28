@@ -1,10 +1,36 @@
+.advantage {
+  padding: 24px 20px;
+  background-color: @color-background-tertiary;
+}
+
 .advantage__title {
+  margin-top: 0;
+  margin-bottom: 11px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: @color-heading-primary;
+}
 
-  &--illustrated {
+.advantage__number {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.advantage__text {
+  margin: 0;
+}
+
+.advantage--illustrated {
+  padding: 37px 20px;
+  color: @color-text-secondary;
+  background-color: @color-background-secondary;
+
+  .advantage__title {
     color: @color-text-secondary;
   }
+}
+
+.advantage--first {
+  padding: 33px 40px;
 }

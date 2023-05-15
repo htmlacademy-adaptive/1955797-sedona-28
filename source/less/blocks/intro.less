@@ -4,6 +4,8 @@
 }
 
 .intro__image-container {
+  display: flex;
+  justify-content: center;
   min-height: 158px;
   padding: 52px 20px 67px;
   background-color: @color-background-secondary;
@@ -18,10 +20,20 @@
   @media (min-width: @desktop-width) {
     padding: 101px 20px 120px;
   }
+
+  img {
+    display: block;
+  }
 }
 
 .intro__text-container {
   padding: 36px 20px 28px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 64px 20px 84px;
