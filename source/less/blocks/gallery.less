@@ -1,6 +1,7 @@
 .gallery {
-  padding-left: 20px;
-  padding-right: 20px;
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 0;
@@ -20,6 +21,25 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery__item {
+  @media (max-width: @mobile-width-only) {
+    padding: 24px 20px;
+    border-top: 1px solid @color-divider-secondary;
+
+    &:last-child {
+      border-bottom: 1px solid @color-divider-secondary;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-background-underlay-primary;
+
+    &:nth-child(2n+3) {
+      background-color: @color-background-underlay-secondary;
+    }
   }
 }
 
