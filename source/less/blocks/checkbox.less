@@ -19,3 +19,24 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.checkbox + label {
+  &:hover::before {
+    background-color: @color-background-underlay-focus;
+  }
+
+  &:active::before {
+    background-color: @color-background-underlay-pressed;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.checkbox:focus + label::before {
+  background-color: @color-background-underlay-focus;
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+

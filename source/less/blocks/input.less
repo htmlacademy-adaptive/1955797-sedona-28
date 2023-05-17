@@ -27,4 +27,15 @@
   &--email {
     background-image: url("../img/icons/mail.svg");
   }
+
+  &:hover,
+  &:focus {
+    background-color: @color-background-underlay-focus;
+  }
+
+  &:focus:not(:placeholder-shown) {
+    background-color: @color-background-primary;
+    outline: @color-background-underlay-focus solid 4px;
+    outline-offset: -4px;
+  }
 }
