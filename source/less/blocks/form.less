@@ -21,7 +21,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    gap: 50px;
+    gap: 100px;
+    margin-bottom: 71px;
   }
 }
 
@@ -58,6 +59,17 @@
     &--sights {
       border-top: 1px solid @color-divider-tertiary;
       margin-bottom: 42px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--impression,
+    &--sights {
+      margin-bottom: 56px;
+    }
+
+    &--emotions {
+      margin-bottom: 48px;
     }
   }
 }
@@ -113,6 +125,8 @@
     @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      padding: 17px 11px 17px 53px;
+      column-gap: 28px;
     }
   }
 
@@ -126,7 +140,9 @@
 
     @media (min-width: @desktop-width) {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, max-content);
+      padding: 31px 44px;
+      column-gap: 64px;
     }
   }
 }
