@@ -1,0 +1,21 @@
+.radio + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: @color-background-underlay-primary;
+  border-radius: 50%;
+}
+
+.radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: @color-text-primary;
+  border-radius: 50%;
+}

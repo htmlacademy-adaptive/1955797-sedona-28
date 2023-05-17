@@ -66,7 +66,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="form__group">
+              <fieldset class="form__group form__group--contacts">
                 <legend class="form__group-caption">Контактная информация:</legend>
                 <ul class="form__group-list">
                   <li class="form__group-item">
@@ -80,45 +80,45 @@
                 </ul>
               </fieldset>
             </div>
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--impression">
               <legend class="form__group-caption">Ваше общее впечатление:</legend>
               <ul class="form__group-list form__group-list--impression">
                 <li class="form__group-item">
+                  <input class="radio visually-hidden" type="radio" name="impression" id="positive-impression" value="positive" checked>
                   <label class="label label--radio" for="positive-impression">Скорее положительное</label>
-                  <input class="radio" type="radio" name="impression" id="positive-impression" value="positive" checked>
                 </li>
                 <li class="form__group-item">
+                  <input class="radio visually-hidden" type="radio" name="impression" id="negative-impression" value="negative">
                   <label class="label label--radio" for="negative-impression">Скорее отрицательное</label>
-                  <input class="radio" type="radio" name="impression" id="negative-impression" value="negative">
                 </li>
                 <li class="form__group-item">
+                  <input class="radio visually-hidden" type="radio" name="impression" id="uncertain-impression" value="uncertain">
                   <label class="label label--radio" for="uncertain-impression">Затрудняюсь ответить</label>
-                  <input class="radio" type="radio" name="impression" id="uncertain-impression" value="uncertain">
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group-sights">
               <legend class="form__group-caption">Посещенные достопримечательности:</legend>
               <ul class="form__group-list form__group-list--sights">
                 <li class="form__group-item">
+                  <input class="checkbox visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
                   <label class="label label--checkbox" for="bridge">Мост Дьявола</label>
-                  <input class="checkbox" type="checkbox" name="bridge" id="bridge" checked>
                 </li>
                 <li class="form__group-item">
+                  <input class="checkbox visually-hidden" type="checkbox" name="mountain" id="mountain" checked>
                   <label class="label label--checkbox" for="mountain">Гора-Колокол</label>
-                  <input class="checkbox" type="checkbox" name="mountain" id="mountain" checked>
                 </li>
                 <li class="form__group-item">
+                  <input class="checkbox visually-hidden" type="checkbox" name="park" id="park" checked>
                   <label class="label label--checkbox" for="park">Слайд-парк</label>
-                  <input class="checkbox" type="checkbox" name="park" id="park" checked>
                 </li>
                 <li class="form__group-item">
+                  <input class="checkbox visually-hidden" type="checkbox" name="rocks" id="rocks">
                   <label class="label label--checkbox" for="rocks">Красные скалы</label>
-                  <input class="checkbox" type="checkbox" name="rocks" id="rocks">
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--emotions">
               <legend class="form__group-caption">Опишите свои эмоции:</legend>
               <textarea class="textarea" name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
