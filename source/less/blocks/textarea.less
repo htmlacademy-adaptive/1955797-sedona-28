@@ -1,0 +1,31 @@
+.textarea {
+  width: 100%;
+  height: 150px;
+  padding: 16px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @color-heading-primary;
+  background-color: @color-background-underlay-primary;
+  border: none;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @color-background-underlay-focus;
+  }
+
+  &:focus:not(:placeholder-shown) {
+    background-color: @color-background-primary;
+    outline: @color-background-underlay-focus solid 4px;
+    outline-offset: -4px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 160px;
+  }
+}

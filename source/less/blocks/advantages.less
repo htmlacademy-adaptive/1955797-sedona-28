@@ -1,5 +1,6 @@
 .advantages {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages__list {
@@ -13,7 +14,35 @@
   }
 }
 
+.advantages__item {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 1px;
+    background-color: @color-divider-primary;
+  }
+
+  &:last-child::after {
+    content: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: none;
+    }
+  }
+}
+
 .advantages__item--illustrated {
+  &::after {
+    content: none;
+  }
+
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
   }

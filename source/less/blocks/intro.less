@@ -1,16 +1,130 @@
+.intro {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .intro__image-container {
+  display: flex;
+  justify-content: center;
+  min-height: 158px;
+  padding: 52px 20px 67px;
   background-color: @color-background-secondary;
   background-image: url("../img/background/intro-background-mobile.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 95px 20px 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 101px 20px 120px;
+  }
 
   img {
     display: block;
   }
 }
 
+.intro__text-container {
+  padding: 36px 20px 28px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 20px 108px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 20px 68px;
+  }
+}
+
 .intro__title {
+  margin-top: 0;
+  margin-bottom: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: @color-heading-primary;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.intro__text {
+  margin: 0;
+}
+
+.intro--main {
+  .intro__image-container {
+    padding: 90px 18px 85px;
+
+    @media (min-width: @tablet-width) {
+      padding: 78px 20px 90px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 78px 20px 90px;
+    }
+  }
+
+  .intro__text-container {
+    padding: 32px 20px 53px;
+
+    @media (min-width: @tablet-width) {
+      padding: 47px 20px 56px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 59px 20px 44px;
+    }
+  }
+
+  .intro__title {
+    margin-bottom: 35px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+.intro--catalog {
+  .intro__text-container {
+    padding: 37px 20px 51px;
+
+    @media (min-width: @tablet-width) {
+      padding: 61px 20px 64px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 100px 20px 66px;
+    }
+  }
+
+  .intro__title {
+    margin-bottom: 26px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 26px;
+    }
+  }
 }

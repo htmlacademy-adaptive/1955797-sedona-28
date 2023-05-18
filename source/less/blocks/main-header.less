@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: center;
   min-height: 56px;
   font-weight: 700;
@@ -14,6 +13,7 @@
   position: relative;
   align-self: flex-start;
   width: 20%;
+  margin: 0 auto;
   padding-bottom: 56px;
 
   @media (min-width: @tablet-width) {
@@ -26,13 +26,22 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   width: 185px;
+  transform: translateX(-50%);
   z-index: 1;
-}
 
-.main-header__logo img {
-  display: block;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  img {
+    display: block;
+  }
 }
 
 .main-header__nav {

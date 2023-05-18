@@ -1,0 +1,40 @@
+.checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: @color-background-underlay-primary;
+}
+
+.checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox + label {
+  &:hover::before {
+    background-color: @color-background-underlay-focus;
+  }
+
+  &:active::before {
+    background-color: @color-background-underlay-pressed;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.checkbox:focus + label::before {
+  background-color: @color-background-underlay-focus;
+  outline: 5px auto Highlight;
+}

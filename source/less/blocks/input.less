@@ -1,0 +1,41 @@
+.input {
+  width: 100%;
+  padding: 16px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @color-heading-primary;
+  background-color: @color-background-underlay-primary;
+  border: none;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &--phone,
+  &--email {
+    padding-right: 60px;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &--phone {
+    background-image: url("../img/icons/phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/icons/mail.svg");
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @color-background-underlay-focus;
+  }
+
+  &:focus:not(:placeholder-shown) {
+    background-color: @color-background-primary;
+    outline: @color-background-underlay-focus solid 4px;
+    outline-offset: -4px;
+  }
+}

@@ -1,0 +1,27 @@
+.button {
+  padding: 16px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @color-text-secondary;
+  background-color: @color-background-secondary;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @color-background-secondary-hover;
+  }
+
+  &:active {
+    color: @color-text-secondary-active;
+    background-color: @color-background-secondary-active;
+  }
+
+  &:disabled {
+    background-color: @color-background-disabled;
+  }
+}
