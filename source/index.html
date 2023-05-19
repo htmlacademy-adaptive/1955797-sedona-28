@@ -11,7 +11,7 @@
       <header class="main-header">
         <div class="main-header__logo-wrapper">
           <a class="main-header__logo" href="index.html">
-            <img src="img/logo.svg" width="185" height="96" alt="Логотип: городок Седона.">
+            <img src="img/logo/sedona-logo.svg" width="185" height="96" alt="Логотип: городок Седона.">
           </a>
         </div>
         <nav class="main-header__nav main-nav main-nav--nojs">
@@ -38,7 +38,11 @@
         <h1 class="visually-hidden">Седона</h1>
         <section class="intro intro--main">
           <div class="intro__image-container">
-            <img src="img/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/content/welcome-title-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/content/welcome-title-tablet.svg">
+              <img src="img/content/welcome-title-mobile.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
+            </picture>
           </div>
           <div class="intro__text-container">
             <h2 class="intro__title">Седона — небольшой городок в Аризоне, </br>заслуживающий большего!</h2>
@@ -56,7 +60,13 @@
                     <span class="advantage__number">— №1 —</span>
                     <p class="advantage__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
                   </div>
-                  <img class="advantage-illustration__image" src="img/sedona-town.jpg" width="320" height="260" alt="Городок Седона.">
+                  <div class="advantage-illustration__image-container">
+                    <picture>
+                      <source media="(min-width: 1200px)" srcset="img/content/town-desktop.jpg 1x, img/content/town-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/content/town-tablet.jpg 1x, img/content/town-tablet@2x.jpg 2x">
+                      <img class="advantage-illustration__image" src="img/content/town-mobile.jpg" srcset="img/content/town-mobile@2x.jpg 2x" width="320" height="260" alt="Городок Седона.">
+                    </picture>
+                  </div>
                 </div>
                 <ul class="services">
                   <li class="services__item services__item--accomodation">
@@ -80,7 +90,13 @@
                   <span class="advantage__number">— №2 —</span>
                   <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                 </div>
-                <img class="advantage-illustration__image" src="img/bridge.jpg" width="320" height="260" alt="Мост дьявола.">
+                <div class="advantage-illustration__image-container">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/content/bridge-desktop.jpg 1x, img/content/bridge-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/content/bridge-tablet.jpg 1x, img/content/bridge-tablet@2x.jpg 2x">
+                    <img src="img/content/bridge-mobile.jpg" srcset="img/content/bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола.">
+                  </picture>
+                </div>
               </div>
             </li>
             <li class="advantages__item">

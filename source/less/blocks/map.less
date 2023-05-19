@@ -2,9 +2,18 @@
   min-width: 320px;
   height: 350px;
   background-color: @color-background-secondary;
-  background-image: url("../img/map-desktop.jpg");
+  background-image: url("../img/background/map-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/background/map-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background/map-desktop.jpg");
+  }
 
   iframe {
     display: block;

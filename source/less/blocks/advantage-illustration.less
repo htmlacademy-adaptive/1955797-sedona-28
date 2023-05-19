@@ -1,26 +1,37 @@
 .advantage-illustration {
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-  }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row dense;
 
-  &--reversed {
-    @media (min-width: @tablet-width) {
-      flex-direction: row-reverse;
+    &__description {
+      grid-column: 1 / 2;
+    }
+
+    &__image-container {
+      grid-column: 2 / 4;
     }
   }
 }
 
-.advantage-illustration__description {
+.advantage-illustration--reversed {
   @media (min-width: @tablet-width) {
-    flex: 1 1 0;
+    .advantage-illustration__description {
+      grid-column: 3 / 4;
+    }
+
+    .advantage-illustration__image-container {
+      grid-column: 1 / 3;
+    }
   }
 }
 
-.advantage-illustration__image {
-  @media (min-width: @tablet-width) {
-    flex: 2 1 0;
-  }
+.advantage-illustration__image-container {
+  background-color: @color-background-secondary;
+}
+
+.advantage-illustration__image-container img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
