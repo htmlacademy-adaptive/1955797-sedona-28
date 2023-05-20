@@ -25,12 +25,19 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 26px;
+    font-size: 30px;
   }
 }
 
 .hotel-search__text {
   margin-top: 0;
   margin-bottom: 32px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;

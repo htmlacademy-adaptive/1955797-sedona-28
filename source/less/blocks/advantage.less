@@ -2,6 +2,12 @@
   padding: 24px 20px;
   background-color: @color-background-tertiary;
 
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 256px;
     padding: 40px 30px;

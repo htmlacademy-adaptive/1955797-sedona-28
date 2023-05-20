@@ -50,13 +50,13 @@
     padding: 0;
     padding-top: 28px;
 
-    &--impression,
-    &--emotions {
+    &--impression {
       border-top: 1px solid @color-divider-tertiary;
       margin-bottom: 48px;
     }
 
-    &--sights {
+    &--sights,
+    &--emotions {
       border-top: 1px solid @color-divider-tertiary;
       margin-bottom: 42px;
     }
@@ -139,8 +139,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      display: grid;
-      grid-template-columns: repeat(4, max-content);
+      display: flex;
+      flex-direction: row;
       padding: 31px 44px;
       column-gap: 64px;
     }
@@ -152,8 +152,11 @@
 }
 
 .form__button-wrapper {
+  max-width: 768px;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
