@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -11,7 +15,7 @@
       <header class="main-header">
         <div class="main-header__logo-wrapper">
           <a class="main-header__logo" href="index.html">
-            <img src="img/logo.svg" width="185" height="96" alt="Логотип: городок Седона.">
+            <img src="img/logo/sedona-logo.svg" width="185" height="96" alt="Логотип: городок Седона.">
           </a>
         </div>
         <nav class="main-header__nav main-nav main-nav--nojs">
@@ -38,7 +42,10 @@
         <h1 class="visually-hidden">Седона</h1>
         <section class="intro">
           <div class="intro__image-container">
-            <img src="img/sedona-title.svg" width="229" height="39" alt="Городок Седона.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/content/sedona-title-desktop.svg">
+              <img src="img/content/sedona-title-mobile.svg" width="229" height="39" alt="Городок Седона.">
+            </picture>
           </div>
           <div class="intro__text-container">
             <h2 class="intro__title">Оставьте свой отзыв</h2>
