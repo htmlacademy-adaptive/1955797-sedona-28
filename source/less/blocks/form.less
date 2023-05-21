@@ -29,16 +29,16 @@
 .form__group {
   margin: 0;
   margin-top: 24px;
-  padding: 20px 0 39px;
+  padding: 20px 0 40px;
   border: none;
 
   &--contacts {
-    padding-bottom: 34px;
+    padding-bottom: 36px;
   }
 
   &--impression,
   &--sights {
-    padding-bottom: 24px;
+    padding-bottom: 25px;
   }
 
   &--emotions {
@@ -50,13 +50,13 @@
     padding: 0;
     padding-top: 28px;
 
-    &--impression {
+    &--impression,
+    &--emotions {
       border-top: 1px solid @color-divider-tertiary;
       margin-bottom: 48px;
     }
 
-    &--sights,
-    &--emotions {
+    &--sights {
       border-top: 1px solid @color-divider-tertiary;
       margin-bottom: 42px;
     }
@@ -100,6 +100,7 @@
   @media (min-width: @tablet-width) {
     width: 400px;
     margin: 0 auto;
+    font-size: 21px;
   }
 }
 
@@ -141,7 +142,9 @@
     @media (min-width: @desktop-width) {
       display: flex;
       flex-direction: row;
-      padding: 31px 44px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 32px;
       column-gap: 64px;
     }
   }
@@ -157,7 +160,7 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 22px;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     display: grid;

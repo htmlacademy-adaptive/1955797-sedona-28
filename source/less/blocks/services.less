@@ -51,7 +51,7 @@
 
     &::before {
       position: relative;
-      margin-bottom: 26px;
+      margin-bottom: 21px;
       width: 80px;
       height: 80px;
     }
@@ -71,6 +71,10 @@
 
   @media (min-width: @desktop-width) {
     padding: 60px 50px;
+
+    &::before {
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -83,10 +87,21 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
-    margin-bottom: 26px;
+    margin-bottom: 21px;
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
   }
 }
 
 .services__text {
   margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }

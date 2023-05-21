@@ -1,5 +1,5 @@
 .video {
-  padding: 17px 20px 0 20px;
+  padding: 18px 22px 0;
   text-transform: uppercase;
   text-align: center;
 
@@ -8,7 +8,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 62px 60px 84px;
+    padding: 60px;
+    margin-bottom: 24px;
   }
 }
 
@@ -21,12 +22,8 @@
   color: @color-heading-primary;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 21px;
+    margin-bottom: 30px;
     font-size: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 26px;
   }
 }
 
@@ -35,11 +32,7 @@
   margin: 0 auto 38px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 91px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 89px;
+    margin-bottom: 90px;
   }
 }
 
@@ -52,6 +45,6 @@
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
