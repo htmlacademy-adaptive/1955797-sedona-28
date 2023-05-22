@@ -109,6 +109,12 @@
   .intro__text-container {
     padding: 32px 24px 35px;
 
+    @media (max-width: @mobile-width-only) {
+      br {
+        display: block;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       padding: 47px 20px 56px;
     }
