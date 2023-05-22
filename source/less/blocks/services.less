@@ -44,10 +44,9 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     min-height: 330px;
-    padding: 60px 33px;
+    padding: 56px 33px 60px;
 
     &::before {
       position: relative;
@@ -56,21 +55,32 @@
       height: 80px;
     }
 
-    &--accomodation::before {
-      background-image: url("../img/icons/house-desktop.svg");
+    &--accomodation {
+      &::before {
+        background-image: url("../img/icons/house-desktop.svg");
+      }
+
+      .services__title {
+        margin-bottom: 24px;
+      }
     }
 
     &--food::before {
       background-image: url("../img/icons/burger-desktop.svg");
     }
 
-    &--souvenirs::before {
-      background-image: url("../img/icons/present-desktop.svg");
+    &--souvenirs {
+      padding-top: 60px;
+
+      &::before {
+        margin-bottom: 14px;
+        background-image: url("../img/icons/present-desktop.svg");
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 50px;
+    padding: 65px 50px;
 
     &::before {
       margin-bottom: 24px;
