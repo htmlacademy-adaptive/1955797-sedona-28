@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: -2px;
+  margin-bottom: -4px;
   padding: 18px 22px 0;
   text-transform: uppercase;
   text-align: center;
@@ -39,6 +39,7 @@
 }
 
 .video__preview {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
   background-color: @color-background-secondary;
@@ -48,5 +49,29 @@
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
+}
+
+.video__preview-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 54px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icons/play-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
