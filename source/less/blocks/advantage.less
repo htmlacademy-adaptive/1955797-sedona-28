@@ -10,7 +10,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 256px;
-    padding: 40px 30px;
+    padding: 42px 30px 38px;
   }
 
   @media (min-width: @desktop-width) {
@@ -73,7 +73,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 256px;
-    padding: 50px 30px 30px;
+    padding: 52px 30px 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -84,5 +84,11 @@
 .advantage--first {
   @media (max-width: @mobile-width-only) {
     padding: 48px 20px 40px;
+
+    .advantage__text {
+      br {
+        display: block;
+      }
+    }
   }
 }

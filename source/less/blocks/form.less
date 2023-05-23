@@ -143,9 +143,13 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
-      padding: 32px;
-      column-gap: 64px;
+      justify-content: space-evenly;
+      padding: 32px 0;
+      column-gap: 20px;
+
+      .form__group-item {
+        max-width: 25%;
+      }
     }
   }
 }
@@ -160,7 +164,7 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     display: grid;

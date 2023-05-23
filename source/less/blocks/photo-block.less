@@ -42,12 +42,12 @@
 
 .photo-block:first-child .photo-block__description {
   @media (min-width: @desktop-width) {
-    padding: 22px 20px 15px 21px;
+    padding: 22px 22px 15px 21px;
   }
 }
 
 .photo-block__info {
-  margin-bottom: 11px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -73,10 +73,23 @@
   }
 }
 
-.photo-block__likes {
+.photo-block__likes-button {
   display: flex;
+  padding: 0;
   font-weight: 700;
   color: @color-heading-primary;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   svg {
     margin-right: 14px;
@@ -84,6 +97,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+
     svg {
       margin-right: 9px;
     }
@@ -91,6 +106,7 @@
 
   @media (min-width: @desktop-width) {
     color: @color-text-secondary;
+    margin-bottom: 5px;
 
     svg {
       opacity: 1;
@@ -99,5 +115,9 @@
 }
 
 .photo-block__likes-number {
-  padding-top: 5px;
+  padding-top: 7px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+  }
 }
