@@ -73,10 +73,21 @@
   }
 }
 
-.photo-block__likes {
+.photo-block__likes-button {
   display: flex;
   font-weight: 700;
   color: @color-heading-primary;
+  border: none;
+  background: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   svg {
     margin-right: 14px;
